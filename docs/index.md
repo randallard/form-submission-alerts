@@ -3,13 +3,14 @@ layout: default
 ---
 
 <!-- Add Mermaid support -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         mermaid.initialize({
             startOnLoad: true,
             theme: "default",
             securityLevel: "loose",
+            logLevel: "debug", // Add this line
             themeVariables: {
                 fontSize: "16px"
             }
