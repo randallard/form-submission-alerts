@@ -1,3 +1,22 @@
+---
+layout: default
+---
+
+<!-- Add Mermaid support -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "default",
+            securityLevel: "loose",
+            themeVariables: {
+                fontSize: "16px"
+            }
+        });
+    });
+</script>
+
 # System Reliability Documentation
 
 This document outlines the core reliability features and architecture of our system, detailing how we ensure robust, secure, and maintainable operations across all components.
