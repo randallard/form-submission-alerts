@@ -8,22 +8,26 @@
     
     <!-- Add Mermaid support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            mermaid.initialize({
-                startOnLoad: true,
-                theme: "default",
-                securityLevel: "loose",
-                themeVariables: {
-                    fontSize: "16px"
-                }
-            });
-        });
-    </script>
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
       {{ content }}
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'default',
+          securityLevel: 'loose',
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+          },
+          themeVariables: {
+            fontSize: '16px'
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -125,7 +125,7 @@ The implementation focuses on reliability:
 
 ### Component Diagram
 
-```mermaid
+<div class="mermaid">
 flowchart TB
     subgraph Client["Client-Side Reliability"]
         direction TB
@@ -159,7 +159,7 @@ flowchart TB
 
 ### Sequence Diagram
 
-```mermaid
+<div class="mermaid">
 sequenceDiagram
     participant App as Tauri/Mobile App
     participant Core as Rust Core Lib
@@ -212,7 +212,7 @@ sequenceDiagram
     Note over App,CW: Monitoring
     CW->>CW: Generate Metrics
     CW->>CW: Check Alarm Conditions
-```
+</div>
 
 ## Solution Design
 
@@ -248,7 +248,7 @@ sequenceDiagram
 
 ### Architecture Diagram
 
-```mermaid
+<div class="mermaid">
 flowchart TB
     subgraph Client["Client (All Rust)"]
         direction TB
@@ -277,7 +277,7 @@ flowchart TB
     Lambda -->|Verify & Store| DDB
     Lambda -->|Notifications| SES & SNS
     Lambda & DDB & SES & SNS -.->|Logging| CW
-```
+</div>
 
 ## Considered Alternatives
 
