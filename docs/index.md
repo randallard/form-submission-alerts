@@ -156,7 +156,7 @@ flowchart TB
     Transport --> Server
     Server --> Monitoring
     Monitoring -->|Feedback Loop| Client
-```
+</div>
 
 ### Sequence Diagram
 
@@ -170,6 +170,7 @@ sequenceDiagram
     participant SES as AWS SES
     participant SNS as AWS SNS
     participant CW as CloudWatch
+    
     Note over App,CW: Initial Setup
     App->>Auth: Request Device Certificate
     Auth-->>App: Return Certificate & Device ID
